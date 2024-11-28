@@ -7,7 +7,7 @@ class Pessoa {
 
   // Método para retornar a apresentação da pessoa
   apresentar() {
-    return `Nome: ${this.nome}, Idade: ${this.idade} anos.`;
+    return `Nome: ${this.nome}, Idade: ${this.idade} anos.` 
   }
 }
 
