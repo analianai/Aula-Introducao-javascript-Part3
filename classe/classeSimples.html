@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Classe em JavaScript</title>
+</head>
+<body>
+  <h1>Exemplo de Classe com JavaScript</h1>
+  <div id="resultado"></div> <!-- Onde o resultado será exibido -->
+
+  <script>
+    // Definição da classe Carro
+    class Carro {
+      constructor(marca, modelo, ano) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+      }
+
+      exibirDetalhes() {
+        return `Carro: ${this.marca} ${this.modelo}, Ano: ${this.ano}`;
+      }
+
+      ligar() {
+        return `${this.marca} ${this.modelo} está ligado!`;
+      }
+
+      desligar() {
+        return `${this.marca} ${this.modelo} está desligado!`;
+      }
+    }
+
+    // Criando uma instância da classe Carro
+    const meuCarro = new Carro("Toyota", "Corolla", 2022);
+
+    // Exibindo os resultados no HTML
+    const resultadoDiv = document.getElementById("resultado");
+
+    resultadoDiv.innerHTML = `
+      <p>${meuCarro.exibirDetalhes()}</p>
+      <p>${meuCarro.ligar()}</p>
+      <p>${meuCarro.desligar()}</p>
+    `;
+  </script>
+</body>
+</html>

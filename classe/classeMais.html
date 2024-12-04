@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Classe em JavaScript</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    .carro {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    .carro h3 {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Exemplo de Classe com Mais Dados</h1>
+  <div id="resultado"></div> <!-- Onde os resultados serão exibidos -->
+
+  <script>
+    // Definição da classe Carro
+    class Carro {
+      constructor(marca, modelo, ano, cor, quilometragem) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.ano = ano;
+        this.cor = cor;
+        this.quilometragem = quilometragem;
+      }
+
+      // Método para exibir detalhes completos do carro
+      exibirDetalhes() {
+        return `
+          Marca: ${this.marca} <br>
+          Modelo: ${this.modelo} <br>
+          Ano: ${this.ano} <br>
+          Cor: ${this.cor} <br>
+          Quilometragem: ${this.quilometragem.toLocaleString()} km
+        `;
+      }
+
+      // Método para verificar se o carro é novo ou usado
+      verificarEstado() {
+        return this.quilometragem <= 20000 
+          ? "O carro está em excelente estado (novo)." 
+          : "O carro é usado.";
+      }
+
+      // Método para calcular a idade do carro
+      calcularIdade() {
+        const anoAtual = new Date().getFullYear();
+        return anoAtual - this.ano;
+      }
+
+      // Método para exibir se o carro precisa de manutenção
+      precisaDeManutencao() {
+        return this.quilometragem > 50000 
+          ? "Este carro precisa de manutenção." 
+          : "Este carro está em boas condições.";
+      }
+    }
+
+    // Criando várias instâncias de Carro
+    const carros = [
+      new Carro("Toyota", "Corolla", 2022, "Prata", 15000),
+      new Carro("Honda", "Civic", 2018, "Preto", 60000),
+      new Carro("Ford", "Ka", 2015, "Branco", 85000),
+      new Carro("Volkswagen", "Golf", 2021, "Vermelho", 10000)
+    ];
+
+    // Selecionando o elemento HTML onde os carros serão exibidos
+    const resultadoDiv = document.getElementById("resultado");
+
+    // Iterando pelos carros e exibindo suas informações no HTML
+    carros.forEach(carro => {
+      const idade = carro.calcularIdade();
+      resultadoDiv.innerHTML += `
+        <div class="carro">
+          <h3>${carro.marca} ${carro.modelo}</h3>
+          <p>${carro.exibirDetalhes()}</p>
+          <p><strong>Idade:</strong> ${idade} ano(s)</p>
+          <p><strong>Estado:</strong> ${carro.verificarEstado()}</p>
+          <p><strong>Manutenção:</strong> ${carro.precisaDeManutencao()}</p>
+        </div>
+      `;
+    });
+  </script>
+</body>
+</html>

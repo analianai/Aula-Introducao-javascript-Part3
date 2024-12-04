@@ -1,0 +1,38 @@
+[
+    {
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "ano": 2022,
+      "cor": "Prata",
+      "quilometragem": 15000
+    },
+    {
+      "marca": "Honda",
+      "modelo": "Civic",
+      "ano": 2018,
+      "cor": "Preto",
+      "quilometragem": 60000
+    },
+    {
+      "marca": "Ford",
+      "modelo": "Ka",
+      "ano": 2015,
+      "cor": "Branco",
+      "quilometragem": 85000
+    },
+    {
+      "marca": "Volkswagen",
+      "modelo": "Golf",
+      "ano": 2021,
+      "cor": "Vermelho",
+      "quilometragem": 10000
+    },
+    {
+      "marca": "Analia",
+      "modelo": "G11",
+      "ano": 2025,
+      "cor": "Azul",
+      "quilometragem": 0
+    }
+  ]
+  
