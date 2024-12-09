@@ -1,3 +1,4 @@
+![Header](./assets/hd-header.png)
 # Estilização com JavaScript
 
 Como utilizar JavaScript para manipular e aplicar estilos dinamicamente em elementos HTML. Este método permite adicionar interatividade e personalização, além de modificar a aparência de elementos com base em ações do usuário ou condições dinâmicas.
